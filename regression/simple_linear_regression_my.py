@@ -4,6 +4,9 @@ from stats import mean, correlation, standard_deviation, de_mean
 from gradient_descent import minimize_stochastic
 import math, random
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 def predict(alpha, beta, x_i):
     return beta * x_i + alpha
@@ -14,8 +17,7 @@ def error(alpha, beta, x_i, y_i):
 
 
 def sum_of_squared_errors(alpha, beta, x, y):
-    return sum(error(alpha, beta, x_i, y_i) ** 2
-               for x_i, y_i in zip(x, y))
+    return sum(error(alpha, beta, x_i, y_i) ** 2 for x_i, y_i in zip(x, y))
 
 
 def least_squares_fit(x, y):
@@ -26,34 +28,7 @@ def least_squares_fit(x, y):
     return alpha, beta
 
 
-def total_sum_of_squares(y):
-    """the total squared variation of y_i's from their mean"""
-    return sum(v ** 2 for v in de_mean(y))
-
-
-def r_squared(alpha, beta, x, y):
-    """the fraction of variation in y captured by the model, which equals
-    1 - the fraction of variation in y not captured by the model"""
-
-    return 1.0 - (sum_of_squared_errors(alpha, beta, x, y) /
-                  total_sum_of_squares(y))
-
-
-# -------------- using gradient descent --------------
-
-
-def squared_error(x_i, y_i, theta):
-    alpha, beta = theta
-    return error(alpha, beta, x_i, y_i) ** 2
-
-
-def squared_error_gradient(x_i, y_i, theta):
-    alpha, beta = theta
-    return [-2 * error(alpha, beta, x_i, y_i),  # alpha partial derivative
-            -2 * error(alpha, beta, x_i, y_i) * x_i]  # beta partial derivative
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     num_friends_good = [49, 41, 40, 25, 21, 21, 19, 19, 18, 18, 16, 15, 15, 15, 15, 14, 14, 13, 13, 13, 13, 12, 12, 11,
                         10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
                         9, 9, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
@@ -81,19 +56,9 @@ if __name__ == "__main__":
     print("alpha", alpha)
     print("beta", beta)
 
-    print("r-squared", r_squared(alpha, beta, num_friends_good, daily_minutes_good))
+    pred = np.array([predict(alpha, beta, x_i) for x_i in num_friends_good])
+    plt.plot(np.array(num_friends_good), np.array(daily_minutes_good), 'o')
+    plt.plot(np.array(num_friends_good), pred)
+    plt.show()
 
-    print()
 
-    print("gradient descent:")
-    # choose random value to start
-    random.seed(0)
-    theta = [random.random(), random.random()]
-    alpha, beta = minimize_stochastic(squared_error,
-                                      squared_error_gradient,
-                                      num_friends_good,
-                                      daily_minutes_good,
-                                      theta,
-                                      0.0001)
-    print("alpha", alpha)
-    print("beta", beta)
