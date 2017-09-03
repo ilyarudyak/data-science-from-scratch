@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 from linear_algebra import vector_subtract
 from stats import mean, correlation, standard_deviation, de_mean
-from gradient_descent import minimize_stochastic
+from gradient_descent import minimize_stochastic, minimize_batch2
 import math, random
 
 
@@ -41,6 +41,13 @@ def r_squared(alpha, beta, x, y):
 
 # -------------- using gradient descent --------------
 
+def squared_error_batch(x, y, theta):
+    return sum([squared_error(xi, yi, theta) for xi, yi in zip(x, y)])
+
+
+def squared_error_gradient_batch(x, y, theta):
+    return [squared_error_gradient(xi, yi, theta) for xi, yi in zip(x, y)]
+
 
 def squared_error(x_i, y_i, theta):
     alpha, beta = theta
@@ -77,23 +84,43 @@ if __name__ == "__main__":
                           12.16, 30.7, 31.22, 34.65, 13.13, 27.51, 33.2, 31.57, 14.1, 33.42, 17.44, 10.12, 24.42, 9.82,
                           23.39, 30.93, 15.03, 21.67, 31.09, 33.29, 22.61, 26.89, 23.48, 8.38, 27.81, 32.35, 23.84]
 
-    alpha, beta = least_squares_fit(num_friends_good, daily_minutes_good)
-    print("alpha", alpha)
-    print("beta", beta)
+    # alpha, beta = least_squares_fit(num_friends_good, daily_minutes_good)
+    # print("alpha", alpha)
+    # print("beta", beta)
+    #
+    # print("r-squared", r_squared(alpha, beta, num_friends_good, daily_minutes_good))
+    #
+    # print()
+    #
+    # print("gradient descent:")
+    # # choose random value to start
+    # random.seed(0)
+    # theta = [random.random(), random.random()]
+    # alpha, beta = minimize_stochastic(squared_error,
+    #                                   squared_error_gradient,
+    #                                   num_friends_good,
+    #                                   daily_minutes_good,
+    #                                   theta,
+    #                                   0.0001)
+    # print("alpha", alpha)
+    # print("beta", beta)
 
-    print("r-squared", r_squared(alpha, beta, num_friends_good, daily_minutes_good))
+    random.seed(42)
+    x = list(range(3))
+    y = [2 * xi + 1 + random.random() for xi in x]
+    print(x, y)
 
-    print()
+    theta1 = [1, 1]
+    print(squared_error_batch(x, y, theta1))
+    print(squared_error_gradient_batch(x, y, theta1))
 
-    print("gradient descent:")
-    # choose random value to start
-    random.seed(0)
-    theta = [random.random(), random.random()]
-    alpha, beta = minimize_stochastic(squared_error,
-                                      squared_error_gradient,
-                                      num_friends_good,
-                                      daily_minutes_good,
-                                      theta,
-                                      0.0001)
-    print("alpha", alpha)
-    print("beta", beta)
+
+    alpha1, beta1 = minimize_batch2(squared_error_batch,
+                                    squared_error_gradient_batch,
+                                    num_friends_good,
+                                    daily_minutes_good,
+                                    theta1,
+                                    0.0001)
+
+    print("alpha1", alpha1)
+    print("beta1", beta1)

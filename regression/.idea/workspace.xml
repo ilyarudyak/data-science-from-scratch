@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74856fda-8216-4d3d-92bc-e84c6d162d55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple_linear_regression_my.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grad_descent/batch_grad.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple_regression/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple_regression/simple_regression_batch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decision-trees/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../decision-trees/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decision-trees/decision_trees.py" afterPath="$PROJECT_DIR$/../decision-trees/decision_trees.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../decision-trees/interview.py" afterPath="$PROJECT_DIR$/../decision-trees/interview.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gradient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../gradient/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../knn/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../knn/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../naive-bayes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../naive-bayes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradient_descent.py" afterPath="$PROJECT_DIR$/gradient_descent.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple_linear_regression.py" afterPath="$PROJECT_DIR$/simple_linear_regression.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../visualizing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../visualizing/.idea/workspace.xml" />
     </list>
@@ -23,34 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="simple_linear_regression.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simple_linear_regression.py">
+      <file leaf-file-name="batch_grad.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grad_descent/batch_grad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="88" column="20" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#416#502#0" expanded="false" />
-                <element signature="e#1630#2422#0" expanded="false" />
-                <element signature="e#2448#4194#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simple_linear_regression_my.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_linear_regression_my.py">
+      <file leaf-file-name="simple_regression_batch.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simple_regression/simple_regression_batch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="59" column="73" lean-forward="false" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+            <state relative-caret-position="132">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#311#336#0" expanded="false" />
-                <element signature="e#377#415#0" expanded="false" />
-                <element signature="e#468#539#0" expanded="false" />
-                <element signature="e#575#804#0" expanded="false" />
-                <element signature="e#857#1649#0" expanded="false" />
-                <element signature="e#1675#3421#0" expanded="false" />
+                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#103#895#0" expanded="false" />
+                <element signature="e#921#2667#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,7 +66,11 @@
       <list>
         <option value="$PROJECT_DIR$/logistic_regression.py" />
         <option value="$PROJECT_DIR$/simple_linear_regression_my.py" />
+        <option value="$PROJECT_DIR$/gradient_descent.py" />
         <option value="$PROJECT_DIR$/simple_linear_regression.py" />
+        <option value="$PROJECT_DIR$/batch_grad.py" />
+        <option value="$PROJECT_DIR$/simple_regression/simple_regression_batch.py" />
+        <option value="$PROJECT_DIR$/grad_descent/batch_grad.py" />
       </list>
     </option>
   </component>
@@ -110,6 +107,16 @@
               <item name="regression" type="b2602c69:ProjectViewProjectNode" />
               <item name="regression" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="regression" type="b2602c69:ProjectViewProjectNode" />
+              <item name="regression" type="462c0819:PsiDirectoryNode" />
+              <item name="grad_descent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="regression" type="b2602c69:ProjectViewProjectNode" />
+              <item name="regression" type="462c0819:PsiDirectoryNode" />
+              <item name="simple_regression" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -118,6 +125,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grad_descent" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -131,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.simple_linear_regression">
+  <component name="RunManager" selected="Python.simple_regression_batch">
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -193,6 +205,40 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
+    <configuration name="batch_grad" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="regression" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grad_descent/batch_grad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="gradient_descent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="regression" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gradient_descent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="simple_linear_regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -227,14 +273,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="2">
+    <configuration name="simple_regression_batch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/simple_regression" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="regression" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simple_regression/simple_regression_batch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.simple_linear_regression_my" />
       <item index="1" class="java.lang.String" itemvalue="Python.simple_linear_regression" />
+      <item index="2" class="java.lang.String" itemvalue="Python.gradient_descent" />
+      <item index="3" class="java.lang.String" itemvalue="Python.batch_grad" />
+      <item index="4" class="java.lang.String" itemvalue="Python.simple_regression_batch" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.simple_linear_regression" />
-        <item index="1" class="java.lang.String" itemvalue="Python.simple_linear_regression_my" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.simple_regression_batch" />
+        <item index="1" class="java.lang.String" itemvalue="Python.batch_grad" />
+        <item index="2" class="java.lang.String" itemvalue="Python.simple_linear_regression" />
+        <item index="3" class="java.lang.String" itemvalue="Python.gradient_descent" />
+        <item index="4" class="java.lang.String" itemvalue="Python.simple_linear_regression_my" />
       </list>
     </recent_temporary>
   </component>
@@ -260,9 +329,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.500684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -283,13 +352,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradient_descent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/linear_algebra.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -309,7 +371,7 @@
         <state relative-caret-position="464">
           <caret line="59" column="73" lean-forward="false" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="false" />
             <element signature="e#311#336#0" expanded="false" />
             <element signature="e#377#415#0" expanded="false" />
             <element signature="e#468#539#0" expanded="false" />
@@ -320,15 +382,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gradient_descent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#212#297#0" expanded="false" />
+            <element signature="e#338#366#0" expanded="false" />
+            <element signature="e#406#822#0" expanded="false" />
+            <element signature="e#429#441#0" expanded="false" />
+            <element signature="e#474#486#0" expanded="false" />
+            <element signature="e#874#1014#0" expanded="false" />
+            <element signature="e#920#984#0" expanded="false" />
+            <element signature="e#1061#1146#0" expanded="false" />
+            <element signature="e#1068#1146#0" expanded="false" />
+            <element signature="e#1188#1329#0" expanded="false" />
+            <element signature="e#1244#1329#0" expanded="false" />
+            <element signature="e#1368#1397#0" expanded="false" />
+            <element signature="e#1661#1662#0" expanded="false" />
+            <element signature="e#2157#2243#0" expanded="false" />
+            <element signature="e#3374#3487#0" expanded="false" />
+            <element signature="e#3513#3628#0" expanded="false" />
+            <element signature="e#3708#3871#0" expanded="false" />
+            <element signature="e#3874#3875#0" expanded="false" />
+            <element signature="e#3943#4203#0" expanded="false" />
+            <element signature="e#4288#5365#0" expanded="false" />
+            <element signature="e#4614#5343#0" expanded="false" />
+            <element signature="e#4718#4936#0" expanded="false" />
+            <element signature="e#4718#4761#0" expanded="false" />
+            <element signature="e#4963#5099#0" expanded="false" />
+            <element signature="e#5223#5343#0" expanded="false" />
+            <element signature="e#5450#5606#0" expanded="false" />
+            <element signature="e#5640#6487#0" expanded="false" />
+            <element signature="e#5640#5669#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simple_linear_regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="88" column="20" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+        <state relative-caret-position="1672">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="105" selection-end-column="25" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#416#502#0" expanded="false" />
-            <element signature="e#1630#2422#0" expanded="false" />
-            <element signature="e#2448#4194#0" expanded="false" />
+            <element signature="e#1881#2673#0" expanded="false" />
+            <element signature="e#2699#4445#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grad_descent/batch_grad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_regression/simple_regression_batch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#103#895#0" expanded="false" />
+            <element signature="e#921#2667#0" expanded="false" />
           </folding>
         </state>
       </provider>
