@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f469805-255d-4ea1-8936-62ebaa667d41" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tennis.py" afterPath="$PROJECT_DIR$/tennis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decision_trees.py" afterPath="$PROJECT_DIR$/decision_trees.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../knn/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../knn/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../naive-bayes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../naive-bayes/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../visualizing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../visualizing/.idea/workspace.xml" />
@@ -21,9 +22,13 @@
       <file leaf-file-name="decision_trees_sol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decision_trees_sol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="762">
+              <caret line="118" column="28" lean-forward="false" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
               <folding>
+                <element signature="e#135#267#0" expanded="false" />
+                <element signature="e#307#415#0" expanded="false" />
+                <element signature="e#344#415#0" expanded="false" />
+                <element signature="e#454#581#0" expanded="false" />
                 <element signature="e#620#843#0" expanded="false" />
                 <element signature="e#757#842#0" expanded="false" />
                 <element signature="e#879#1112#0" expanded="false" />
@@ -31,8 +36,6 @@
                 <element signature="e#1156#1319#0" expanded="false" />
                 <element signature="e#1371#1533#0" expanded="false" />
                 <element signature="e#1567#2145#0" expanded="false" />
-                <element signature="e#2203#3436#0" expanded="false" />
-                <element signature="e#2203#2231#0" expanded="false" />
                 <element signature="e#3097#3171#0" expanded="false" />
                 <element signature="e#3225#3336#0" expanded="false" />
                 <element signature="e#3478#3604#0" expanded="false" />
@@ -47,10 +50,11 @@
       <file leaf-file-name="decision_trees.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decision_trees.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="344">
+              <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#669#892#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -72,11 +76,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/decision_trees_sol.py" />
-        <option value="$PROJECT_DIR$/decision_trees.py" />
         <option value="$PROJECT_DIR$/tennis.csv" />
         <option value="$PROJECT_DIR$/tennisrow.py" />
         <option value="$PROJECT_DIR$/tennis_data.py" />
         <option value="$PROJECT_DIR$/tennis.py" />
+        <option value="$PROJECT_DIR$/interview.py" />
+        <option value="$PROJECT_DIR$/decision_trees.py" />
       </list>
     </option>
   </component>
@@ -248,36 +253,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/decision_trees_sol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#620#843#0" expanded="false" />
-            <element signature="e#757#842#0" expanded="false" />
-            <element signature="e#879#1112#0" expanded="false" />
-            <element signature="e#1043#1094#0" expanded="false" />
-            <element signature="e#1156#1319#0" expanded="false" />
-            <element signature="e#1371#1533#0" expanded="false" />
-            <element signature="e#1567#2145#0" expanded="false" />
-            <element signature="e#2203#3436#0" expanded="false" />
-            <element signature="e#2203#2231#0" expanded="false" />
-            <element signature="e#3097#3171#0" expanded="false" />
-            <element signature="e#3225#3336#0" expanded="false" />
-            <element signature="e#3478#3604#0" expanded="false" />
-            <element signature="e#4950#5044#0" expanded="false" />
-            <element signature="e#5358#5588#0" expanded="false" />
-            <element signature="e#5700#5922#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tennis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -290,12 +271,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#176#1278#0" expanded="false" />
+            <element signature="e#1306#1479#0" expanded="false" />
+            <element signature="e#1352#1479#0" expanded="false" />
+            <element signature="e#1510#1592#0" expanded="false" />
+            <element signature="e#1682#2005#0" expanded="false" />
+            <element signature="e#1855#2005#0" expanded="false" />
+            <element signature="e#2856#2964#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decision_trees_sol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="118" column="28" lean-forward="false" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+          <folding>
+            <element signature="e#135#267#0" expanded="false" />
+            <element signature="e#307#415#0" expanded="false" />
+            <element signature="e#344#415#0" expanded="false" />
+            <element signature="e#454#581#0" expanded="false" />
+            <element signature="e#620#843#0" expanded="false" />
+            <element signature="e#757#842#0" expanded="false" />
+            <element signature="e#879#1112#0" expanded="false" />
+            <element signature="e#1043#1094#0" expanded="false" />
+            <element signature="e#1156#1319#0" expanded="false" />
+            <element signature="e#1371#1533#0" expanded="false" />
+            <element signature="e#1567#2145#0" expanded="false" />
+            <element signature="e#3097#3171#0" expanded="false" />
+            <element signature="e#3225#3336#0" expanded="false" />
+            <element signature="e#3478#3604#0" expanded="false" />
+            <element signature="e#4950#5044#0" expanded="false" />
+            <element signature="e#5358#5588#0" expanded="false" />
+            <element signature="e#5700#5922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/decision_trees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="344">
+          <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#669#892#0" expanded="false" />
           </folding>
         </state>
       </provider>

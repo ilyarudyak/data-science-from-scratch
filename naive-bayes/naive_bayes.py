@@ -3,7 +3,7 @@ from machine_learning import split_data
 import math, random, re, glob
 
 
-def tokenize(message):
+def build_vocabulary(message):
     message = message.lower()  # convert to lowercase
     all_words = re.findall("[a-z0-9']+", message)  # extract the words
     return set(all_words)  # remove duplicates
@@ -11,12 +11,12 @@ def tokenize(message):
 
 def count_words(training_set):
     """
-    training set consists of pairs (message, is_spam);
-    {'viagra': [100, 1], 'data': [1, 100], ... }
+    :parameter training_set is set of pairs (message, is_spam);
+    :returns {'viagra': [100, 1], 'data': [1, 100], ... }
     """
     counts = defaultdict(lambda: [0, 0])
     for message, is_spam in training_set:
-        for word in tokenize(message):
+        for word in build_vocabulary(message):
             counts[word][0 if is_spam else 1] += 1
     return counts
 
@@ -35,11 +35,10 @@ def word_probabilities(counts, total_spam_msgs, total_ham_msgs, k=0.5):
 
 
 def spam_probability(word_probs, message):
-    message_words = tokenize(message)
+    message_words = build_vocabulary(message)
     log_prob_if_spam = log_prob_if_not_spam = 0.0
 
     for word, prob_if_spam, prob_if_not_spam in word_probs:
-
         # for each word in the message,
         # add the log probability of seeing it
         if word in message_words:
@@ -105,7 +104,6 @@ def p_spam_given_word(word_prob):
     return prob_if_spam / (prob_if_spam + prob_if_not_spam)
 
 
-# noinspection PyShadowingNames
 def train_and_test_model(path):
 
     data = get_subject_data(path)
@@ -118,8 +116,8 @@ def train_and_test_model(path):
     classified = [(subject, is_spam, classifier.classify(subject))
                   for subject, is_spam in test_data]
 
-    counts = Counter((is_spam, spam_probability > 0.5)  # (actual, predicted)
-                     for _, is_spam, spam_probability in classified)
+    counts = Counter([(is_spam, spam_probability > 0.5)  # (actual, predicted)
+                     for _, is_spam, spam_probability in classified])
 
     print(counts, '\n')
 
@@ -139,6 +137,41 @@ def train_and_test_model(path):
     print("hammiest_words", list(map(lambda row: row[0], hammiest_words)))
 
 
+def train_simple_set():
+    # simple training set
+    spam_message = 'rolex viagra free money'
+    spam_message2 = 'rolex'
+    ham_message = 'data'
+    ham_message2 = 'data data'
+    training_set = {(spam_message, 1), (spam_message2, 1), (ham_message, 0), (ham_message2, 0)}
+    test_message = 'rolex money'
+
+    nbc = NaiveBayesClassifier(k=1.0)
+    nbc.train(training_set)
+    print(nbc.classify(test_message))
+
+
+def train_and_test_model2(path):
+    data = get_subject_data(path)
+    random.seed(0)  # just so you get the same answers as me
+    train_data, test_data = split_data(data, 0.75)
+
+    nbc = NaiveBayesClassifier()
+    nbc.train(train_data)
+
+    classified = [(subject, is_spam, nbc.classify(subject))
+                  for subject, is_spam in test_data]
+
+    counts = Counter((is_spam, spam_probability > 0.5)  # (actual, predicted)
+                     for _, is_spam, spam_probability in classified)
+
+    print(dict(counts))
+
+
 if __name__ == "__main__":
+    # data is here: http://spamassassin.apache.org/old/publiccorpus/
     path = r'/Users/ilyarudyak/Downloads/*/*'
-    train_and_test_model(path)
+    train_and_test_model2(path)
+
+
+

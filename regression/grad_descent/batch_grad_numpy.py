@@ -45,6 +45,26 @@ def minimize_batch_numpy(target_fn, gradient_fn, x, y, theta_0, tolerance=0.01):
     return theta
 
 
+def minimize_batch_numpy2(target_fn, gradient_fn, x, y, theta_0, tolerance=0.01):
+    theta = theta_0.reshape(1, 2)
+    learning_rates = np.array([100, 10, 1, 0.1, 0.01, 0.001, 0.0001, 0.00001]).reshape(8, 1)
+    value = target_fn(x, y, theta)
+
+    while True:
+        grad = gradient_fn(x, y, theta).reshape(1, 2)
+        next_thetas = theta - learning_rates * grad
+
+        next_theta = min(next_thetas, key=lambda t: target_fn(x, y, t))
+        next_value = target_fn(x, y, next_theta)
+
+        if abs(value - next_value) < tolerance:
+            break
+
+        theta, value = next_theta, next_value
+
+    return theta
+
+
 def distance(u, v):
     return math.sqrt(sum([(ui - vi) ** 2 for ui, vi in zip(u, v)]))
 
@@ -59,6 +79,11 @@ def squared_error_batch(x, y, theta):
 
 
 def squared_error_batch_numpy(x, y, theta):
+    alpha, beta = theta.squeeze()
+    return np.sum((y - beta * x - alpha) ** 2)
+
+
+def squared_error_batch_numpy2(x, y, theta):
     alpha, beta = theta.squeeze()
     return np.sum((y - beta * x - alpha) ** 2)
 
@@ -95,5 +120,5 @@ def test_batch_numpy(n=3):
 
 
 if __name__ == '__main__':
-    test_batch_numpy()
+    test_batch_numpy(67)
 

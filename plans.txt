@@ -1,0 +1,19 @@
+    done:
+
+    - kNN;
+    - naive bayes;
+    - decision trees;
+
+    to go:
+
+    - regression;
+    - NN;
+    - clustering;
+
+    in the future:
+
+    - NLP;
+    - recommender systems;
+    - MapReduce;
+    - network analysis;
+
