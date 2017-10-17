@@ -4,10 +4,16 @@ import math, random, re, glob
 from sklearn.naive_bayes import BernoulliNB
 
 
-def build_vocabulary(message):
+def build_vocabulary_set(message, token_pattern=r'(?u)\b\w\w+\b'):
     message = message.lower()  # convert to lowercase
-    all_words = re.findall("[a-z0-9']+", message)  # extract the words
+    all_words = re.findall(token_pattern, message)  # extract the words
     return set(all_words)  # remove duplicates
+
+
+def build_vocabulary_list(message, token_pattern=r'(?u)\b\w\w+\b'):
+    message = message.lower()  # convert to lowercase
+    all_words = re.findall(token_pattern, message)  # extract the words
+    return all_words
 
 
 def count_words(training_set):
@@ -17,8 +23,23 @@ def count_words(training_set):
     """
     counts = defaultdict(lambda: [0, 0])
     for message, is_spam in training_set:
-        for word in build_vocabulary(message):
+        for word in build_vocabulary_set(message):
+
             counts[word][0 if is_spam else 1] += 1
+    return counts
+
+
+def count_words_like_CountVectorizer(training_set):
+    """
+    :parameter training_set is set of pairs (message, is_spam);
+    :returns {'viagra': [100, 1], 'data': [1, 100], ... }
+    """
+    counts = defaultdict(lambda: 0)
+    for message, _ in training_set:
+        if 'congratulations' in message.lower():
+            print('congratulations')
+        for word in build_vocabulary_list(message):
+            counts[word] += 1
     return counts
 
 
@@ -36,7 +57,7 @@ def word_probabilities(counts, total_spam_msgs, total_ham_msgs, k=0.5):
 
 
 def spam_probability(word_probs, message):
-    message_words = build_vocabulary(message)
+    message_words = build_vocabulary_set(message)
     log_prob_if_spam = log_prob_if_not_spam = 0.0
 
     for word, prob_if_spam, prob_if_not_spam in word_probs:

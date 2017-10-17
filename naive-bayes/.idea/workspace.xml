@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72620d7b-77fb-40e4-be90-76f30639eff4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/naive_bayes_sklearn.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naive_bayes.py" afterPath="$PROJECT_DIR$/naive_bayes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naive_bayes_sklearn.py" afterPath="$PROJECT_DIR$/naive_bayes_sklearn.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,46 +16,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="naive_bayes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="naive_bayes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naive_bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="533">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#197#364#0" expanded="false" />
-                <element signature="e#402#734#0" expanded="false" />
-                <element signature="e#402#535#1" expanded="false" />
-                <element signature="e#627#716#0" expanded="false" />
-                <element signature="e#813#1195#0" expanded="false" />
-                <element signature="e#813#989#1" expanded="false" />
-                <element signature="e#1001#1195#0" expanded="false" />
-                <element signature="e#1003#1126#0" expanded="false" />
-                <element signature="e#1245#2045#0" expanded="false" />
-                <element signature="e#1406#1884#0" expanded="false" />
-                <element signature="e#1406#1437#0" expanded="false" />
-                <element signature="e#1531#1636#0" expanded="false" />
-                <element signature="e#1646#1687#0" expanded="false" />
-                <element signature="e#1767#1884#0" expanded="false" />
-                <element signature="e#3299#3580#0" expanded="false" />
-                <element signature="e#3397#3580#0" expanded="false" />
-                <element signature="e#3431#3580#0" expanded="false" />
-                <element signature="e#3483#3580#0" expanded="false" />
-                <element signature="e#3850#3958#0" expanded="false" />
-                <element signature="e#3998#5154#0" expanded="false" />
-                <element signature="e#4232#4334#0" expanded="false" />
-                <element signature="e#4357#4483#0" expanded="false" />
-                <element signature="e#5185#5569#0" expanded="false" />
+                <element signature="e#1210#1592#0" expanded="false" />
+                <element signature="e#1210#1386#1" expanded="false" />
+                <element signature="e#1398#1592#0" expanded="false" />
+                <element signature="e#1400#1523#0" expanded="false" />
+                <element signature="e#1642#2446#0" expanded="false" />
+                <element signature="e#1807#2285#0" expanded="false" />
+                <element signature="e#1807#1838#0" expanded="false" />
+                <element signature="e#1932#2037#0" expanded="false" />
+                <element signature="e#2047#2088#0" expanded="false" />
+                <element signature="e#2168#2285#0" expanded="false" />
+                <element signature="e#3700#3981#0" expanded="false" />
+                <element signature="e#3798#3981#0" expanded="false" />
+                <element signature="e#3832#3981#0" expanded="false" />
+                <element signature="e#3884#3981#0" expanded="false" />
+                <element signature="e#4251#4359#0" expanded="false" />
+                <element signature="e#4399#5555#0" expanded="false" />
+                <element signature="e#4633#4735#0" expanded="false" />
+                <element signature="e#4758#4884#0" expanded="false" />
+                <element signature="e#5586#5970#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naive_bayes_sklearn.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="naive_bayes_sklearn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naive_bayes_sklearn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="486">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,8 +81,8 @@
       <list>
         <option value="$PROJECT_DIR$/machine_learning.py" />
         <option value="$PROJECT_DIR$/naive_bayes_sol.py" />
-        <option value="$PROJECT_DIR$/naive_bayes.py" />
         <option value="$PROJECT_DIR$/naive_bayes_sklearn.py" />
+        <option value="$PROJECT_DIR$/naive_bayes.py" />
       </list>
     </option>
   </component>
@@ -330,29 +327,25 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#197#364#0" expanded="false" />
-            <element signature="e#402#734#0" expanded="false" />
-            <element signature="e#402#535#1" expanded="false" />
-            <element signature="e#627#716#0" expanded="false" />
-            <element signature="e#813#1195#0" expanded="false" />
-            <element signature="e#813#989#1" expanded="false" />
-            <element signature="e#1001#1195#0" expanded="false" />
-            <element signature="e#1003#1126#0" expanded="false" />
-            <element signature="e#1245#2045#0" expanded="false" />
-            <element signature="e#1406#1884#0" expanded="false" />
-            <element signature="e#1406#1437#0" expanded="false" />
-            <element signature="e#1531#1636#0" expanded="false" />
-            <element signature="e#1646#1687#0" expanded="false" />
-            <element signature="e#1767#1884#0" expanded="false" />
-            <element signature="e#3299#3580#0" expanded="false" />
-            <element signature="e#3397#3580#0" expanded="false" />
-            <element signature="e#3431#3580#0" expanded="false" />
-            <element signature="e#3483#3580#0" expanded="false" />
-            <element signature="e#3850#3958#0" expanded="false" />
-            <element signature="e#3998#5154#0" expanded="false" />
-            <element signature="e#4232#4334#0" expanded="false" />
-            <element signature="e#4357#4483#0" expanded="false" />
-            <element signature="e#5185#5569#0" expanded="false" />
+            <element signature="e#1210#1592#0" expanded="false" />
+            <element signature="e#1210#1386#1" expanded="false" />
+            <element signature="e#1398#1592#0" expanded="false" />
+            <element signature="e#1400#1523#0" expanded="false" />
+            <element signature="e#1642#2446#0" expanded="false" />
+            <element signature="e#1807#2285#0" expanded="false" />
+            <element signature="e#1807#1838#0" expanded="false" />
+            <element signature="e#1932#2037#0" expanded="false" />
+            <element signature="e#2047#2088#0" expanded="false" />
+            <element signature="e#2168#2285#0" expanded="false" />
+            <element signature="e#3700#3981#0" expanded="false" />
+            <element signature="e#3798#3981#0" expanded="false" />
+            <element signature="e#3832#3981#0" expanded="false" />
+            <element signature="e#3884#3981#0" expanded="false" />
+            <element signature="e#4251#4359#0" expanded="false" />
+            <element signature="e#4399#5555#0" expanded="false" />
+            <element signature="e#4633#4735#0" expanded="false" />
+            <element signature="e#4758#4884#0" expanded="false" />
+            <element signature="e#5586#5970#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -397,29 +390,25 @@
           <caret line="87" column="26" lean-forward="false" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#197#364#0" expanded="false" />
-            <element signature="e#402#734#0" expanded="false" />
-            <element signature="e#402#535#1" expanded="false" />
-            <element signature="e#627#716#0" expanded="false" />
-            <element signature="e#813#1195#0" expanded="false" />
-            <element signature="e#813#989#1" expanded="false" />
-            <element signature="e#1001#1195#0" expanded="false" />
-            <element signature="e#1003#1126#0" expanded="false" />
-            <element signature="e#1245#2045#0" expanded="false" />
-            <element signature="e#1406#1884#0" expanded="false" />
-            <element signature="e#1406#1437#0" expanded="false" />
-            <element signature="e#1531#1636#0" expanded="false" />
-            <element signature="e#1646#1687#0" expanded="false" />
-            <element signature="e#1767#1884#0" expanded="false" />
-            <element signature="e#3299#3580#0" expanded="false" />
-            <element signature="e#3397#3580#0" expanded="false" />
-            <element signature="e#3431#3580#0" expanded="false" />
-            <element signature="e#3483#3580#0" expanded="false" />
-            <element signature="e#3850#3958#0" expanded="false" />
-            <element signature="e#3998#5154#0" expanded="false" />
-            <element signature="e#4232#4334#0" expanded="false" />
-            <element signature="e#4357#4483#0" expanded="false" />
-            <element signature="e#5185#5569#0" expanded="false" />
+            <element signature="e#1210#1592#0" expanded="false" />
+            <element signature="e#1210#1386#1" expanded="false" />
+            <element signature="e#1398#1592#0" expanded="false" />
+            <element signature="e#1400#1523#0" expanded="false" />
+            <element signature="e#1642#2446#0" expanded="false" />
+            <element signature="e#1807#2285#0" expanded="false" />
+            <element signature="e#1807#1838#0" expanded="false" />
+            <element signature="e#1932#2037#0" expanded="false" />
+            <element signature="e#2047#2088#0" expanded="false" />
+            <element signature="e#2168#2285#0" expanded="false" />
+            <element signature="e#3700#3981#0" expanded="false" />
+            <element signature="e#3798#3981#0" expanded="false" />
+            <element signature="e#3832#3981#0" expanded="false" />
+            <element signature="e#3884#3981#0" expanded="false" />
+            <element signature="e#4251#4359#0" expanded="false" />
+            <element signature="e#4399#5555#0" expanded="false" />
+            <element signature="e#4633#4735#0" expanded="false" />
+            <element signature="e#4758#4884#0" expanded="false" />
+            <element signature="e#5586#5970#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -464,29 +453,25 @@
           <caret line="135" column="31" lean-forward="true" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#197#364#0" expanded="false" />
-            <element signature="e#402#734#0" expanded="false" />
-            <element signature="e#402#535#1" expanded="false" />
-            <element signature="e#627#716#0" expanded="false" />
-            <element signature="e#813#1195#0" expanded="false" />
-            <element signature="e#813#989#1" expanded="false" />
-            <element signature="e#1001#1195#0" expanded="false" />
-            <element signature="e#1003#1126#0" expanded="false" />
-            <element signature="e#1245#2045#0" expanded="false" />
-            <element signature="e#1406#1884#0" expanded="false" />
-            <element signature="e#1406#1437#0" expanded="false" />
-            <element signature="e#1531#1636#0" expanded="false" />
-            <element signature="e#1646#1687#0" expanded="false" />
-            <element signature="e#1767#1884#0" expanded="false" />
-            <element signature="e#3299#3580#0" expanded="false" />
-            <element signature="e#3397#3580#0" expanded="false" />
-            <element signature="e#3431#3580#0" expanded="false" />
-            <element signature="e#3483#3580#0" expanded="false" />
-            <element signature="e#3850#3958#0" expanded="false" />
-            <element signature="e#3998#5154#0" expanded="false" />
-            <element signature="e#4232#4334#0" expanded="false" />
-            <element signature="e#4357#4483#0" expanded="false" />
-            <element signature="e#5185#5569#0" expanded="false" />
+            <element signature="e#1210#1592#0" expanded="false" />
+            <element signature="e#1210#1386#1" expanded="false" />
+            <element signature="e#1398#1592#0" expanded="false" />
+            <element signature="e#1400#1523#0" expanded="false" />
+            <element signature="e#1642#2446#0" expanded="false" />
+            <element signature="e#1807#2285#0" expanded="false" />
+            <element signature="e#1807#1838#0" expanded="false" />
+            <element signature="e#1932#2037#0" expanded="false" />
+            <element signature="e#2047#2088#0" expanded="false" />
+            <element signature="e#2168#2285#0" expanded="false" />
+            <element signature="e#3700#3981#0" expanded="false" />
+            <element signature="e#3798#3981#0" expanded="false" />
+            <element signature="e#3832#3981#0" expanded="false" />
+            <element signature="e#3884#3981#0" expanded="false" />
+            <element signature="e#4251#4359#0" expanded="false" />
+            <element signature="e#4399#5555#0" expanded="false" />
+            <element signature="e#4633#4735#0" expanded="false" />
+            <element signature="e#4758#4884#0" expanded="false" />
+            <element signature="e#5586#5970#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -525,45 +510,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naive_bayes.py">
+    <entry file="file://$PROJECT_DIR$/naive_bayes_sklearn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#197#364#0" expanded="false" />
-            <element signature="e#402#734#0" expanded="false" />
-            <element signature="e#402#535#1" expanded="false" />
-            <element signature="e#627#716#0" expanded="false" />
-            <element signature="e#813#1195#0" expanded="false" />
-            <element signature="e#813#989#1" expanded="false" />
-            <element signature="e#1001#1195#0" expanded="false" />
-            <element signature="e#1003#1126#0" expanded="false" />
-            <element signature="e#1245#2045#0" expanded="false" />
-            <element signature="e#1406#1884#0" expanded="false" />
-            <element signature="e#1406#1437#0" expanded="false" />
-            <element signature="e#1531#1636#0" expanded="false" />
-            <element signature="e#1646#1687#0" expanded="false" />
-            <element signature="e#1767#1884#0" expanded="false" />
-            <element signature="e#3299#3580#0" expanded="false" />
-            <element signature="e#3397#3580#0" expanded="false" />
-            <element signature="e#3431#3580#0" expanded="false" />
-            <element signature="e#3483#3580#0" expanded="false" />
-            <element signature="e#3850#3958#0" expanded="false" />
-            <element signature="e#3998#5154#0" expanded="false" />
-            <element signature="e#4232#4334#0" expanded="false" />
-            <element signature="e#4357#4483#0" expanded="false" />
-            <element signature="e#5185#5569#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naive_bayes_sklearn.py">
+    <entry file="file://$PROJECT_DIR$/naive_bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="533">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#1210#1592#0" expanded="false" />
+            <element signature="e#1210#1386#1" expanded="false" />
+            <element signature="e#1398#1592#0" expanded="false" />
+            <element signature="e#1400#1523#0" expanded="false" />
+            <element signature="e#1642#2446#0" expanded="false" />
+            <element signature="e#1807#2285#0" expanded="false" />
+            <element signature="e#1807#1838#0" expanded="false" />
+            <element signature="e#1932#2037#0" expanded="false" />
+            <element signature="e#2047#2088#0" expanded="false" />
+            <element signature="e#2168#2285#0" expanded="false" />
+            <element signature="e#3700#3981#0" expanded="false" />
+            <element signature="e#3798#3981#0" expanded="false" />
+            <element signature="e#3832#3981#0" expanded="false" />
+            <element signature="e#3884#3981#0" expanded="false" />
+            <element signature="e#4251#4359#0" expanded="false" />
+            <element signature="e#4399#5555#0" expanded="false" />
+            <element signature="e#4633#4735#0" expanded="false" />
+            <element signature="e#4758#4884#0" expanded="false" />
+            <element signature="e#5586#5970#0" expanded="false" />
           </folding>
         </state>
       </provider>
