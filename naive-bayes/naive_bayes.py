@@ -1,6 +1,7 @@
 from collections import Counter, defaultdict
 from machine_learning import split_data
 import math, random, re, glob
+from sklearn.naive_bayes import BernoulliNB
 
 
 def build_vocabulary(message):
@@ -59,8 +60,8 @@ def spam_probability(word_probs, message):
 class NaiveBayesClassifier:
     def __init__(self, k=0.5):
         self.k = k
-        self.word_probs = []
-        self.word_counts = {}
+        self.word_probs = []  # [('handheld', 0.004054054054054054, 0.0002294630564479119) ...
+        self.word_counts = {}  # {'handheld': [1, 0], 'you': [31, 20], 'organizer': [1, 0] ...
 
     def train(self, training_set):
         # count spam and non-spam messages
@@ -97,6 +98,13 @@ def get_subject_data(path):
                     data.append((subject, is_spam))
 
     return data
+
+
+def get_train_test_data(path):
+    data = get_subject_data(path)
+    random.seed(0)  # just so you get the same answers as me
+    train_data, test_data = split_data(data, 0.75)
+    return train_data, test_data
 
 
 def p_spam_given_word(word_prob):
@@ -158,6 +166,7 @@ def train_and_test_model2(path):
 
     nbc = NaiveBayesClassifier()
     nbc.train(train_data)
+    print(len(nbc.word_probs))
 
     classified = [(subject, is_spam, nbc.classify(subject))
                   for subject, is_spam in test_data]
