@@ -1,7 +1,6 @@
 from collections import Counter, defaultdict
 from machine_learning import split_data
 import math, random, re, glob
-from sklearn.naive_bayes import BernoulliNB
 import numpy as np
 
 
