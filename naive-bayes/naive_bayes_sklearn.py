@@ -1,15 +1,19 @@
 import naive_bayes
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import BernoulliNB
 from collections import defaultdict, Counter
 
 
 def split_data(path):
     train_data, test_data = naive_bayes.get_train_test_data(path)
-    train_data, test_data = np.array(train_data), np.array(test_data)
-    train_data_X, train_data_y, test_data_X, test_data_y = \
-        train_data[:, 0], train_data[:, 1], test_data[:, 0], test_data[:, 1]
-    return train_data_X, train_data_y, test_data_X, test_data_y
+
+    train_data_X = [data for data, _ in train_data]
+    train_data_y = [label for _, label in train_data]
+    test_data_X = [data for data, _ in test_data]
+    test_data_y = [label for _, label in test_data]
+
+    return np.array(train_data_X), np.array(train_data_y), np.array(test_data_X), np.array(test_data_y)
 
 
 path = r'/Users/ilyarudyak/Downloads/*/*'
@@ -38,7 +42,7 @@ def build_CountVectorizer(corpus):
     return vectorizer
 
 
-def diff_in_vocabulary(path):
+def diff_in_vocabulary():
     vocabulary_my = naive_bayes.build_vocabulary(train_data)
     vocabulary_sklearn = build_CountVectorizer(train_data_X).vocabulary_
     print(len(vocabulary_my), len(vocabulary_sklearn))
@@ -66,8 +70,24 @@ def diff_in_transform(message):
     print(np.sum(x_my == x_sk) == len(vocabulary_my))
 
 
-if __name__ == '__main__':
+def train_sklearn_classifier():
+    vectorizer = CountVectorizer()
+    vectorizer.fit(train_data_X)
+    train_data_X_trans = vectorizer.transform(train_data_X)
+    test_data_X_trans = vectorizer.transform(test_data_X)
 
-    message = ['lowest life insurance rates life']
-    diff_in_transform(message)
+    nbc = BernoulliNB()
+    nbc.fit(train_data_X_trans, train_data_y)
+    test_data_y_pred = nbc.predict(test_data_X_trans)
+    test_data_y_prob = nbc.predict_proba(test_data_X_trans)
+    return test_data_y_pred, test_data_y_prob
+
+
+if __name__ == '__main__':
+    pred_my, prob_my = naive_bayes.train_and_test_model2(path)
+    pred_skl, prob_skl = train_sklearn_classifier()
+
+    print(prob_my[:25])
+    print(prob_skl[:25])
+
 

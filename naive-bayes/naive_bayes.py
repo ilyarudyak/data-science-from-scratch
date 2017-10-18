@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 from machine_learning import split_data
 import math, random, re, glob
 from sklearn.naive_bayes import BernoulliNB
+import numpy as np
 
 
 def tokenize_message(message, token_pattern=r'(?u)\b\w\w+\b'):
@@ -72,7 +73,7 @@ def spam_probability(word_probs, message):
 
 
 class NaiveBayesClassifier:
-    def __init__(self, k=0.5):
+    def __init__(self, k=1.0):
         self.k = k
         self.word_probs = []  # [('handheld', 0.004054054054054054, 0.0002294630564479119) ...
         self.word_counts = {}  # {'handheld': [1, 0], 'you': [31, 20], 'organizer': [1, 0] ...
@@ -180,7 +181,6 @@ def train_and_test_model2(path):
 
     nbc = NaiveBayesClassifier()
     nbc.train(train_data)
-    print(len(nbc.word_probs))
 
     classified = [(subject, is_spam, nbc.classify(subject))
                   for subject, is_spam in test_data]
@@ -188,12 +188,16 @@ def train_and_test_model2(path):
     counts = Counter((is_spam, spam_probability > 0.5)  # (actual, predicted)
                      for _, is_spam, spam_probability in classified)
 
-    print(dict(counts))
+    print(counts)
+
+    return np.array([spam_probability > 0.5 for _, _, spam_probability in classified]), \
+           np.array([prob for _, _, prob in classified])
 
 
 if __name__ == "__main__":
     # data is here: http://spamassassin.apache.org/old/publiccorpus/
     path = r'/Users/ilyarudyak/Downloads/*/*'
+
     train_and_test_model2(path)
 
 
