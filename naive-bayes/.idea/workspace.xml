@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72620d7b-77fb-40e4-be90-76f30639eff4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spam_packt/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spam_packt/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" afterPath="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,14 +17,14 @@
       <file leaf-file-name="naive_bayes_manual.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_manual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="321">
+              <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#117#394#0" expanded="false" />
-                <element signature="e#125#263#0" expanded="false" />
-                <element signature="e#312#375#0" expanded="false" />
-                <element signature="e#417#748#0" expanded="false" />
+                <element signature="e#197#474#0" expanded="false" />
+                <element signature="e#205#343#0" expanded="false" />
+                <element signature="e#392#455#0" expanded="false" />
+                <element signature="e#1095#1353#0" expanded="false" />
+                <element signature="e#1183#1352#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -339,7 +337,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69357044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.374829" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -369,11 +367,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#117#394#0" expanded="false" />
-            <element signature="e#125#263#0" expanded="false" />
-            <element signature="e#312#375#0" expanded="false" />
-            <element signature="e#417#748#0" expanded="false" />
+            <element signature="e#197#474#0" expanded="false" />
+            <element signature="e#205#343#0" expanded="false" />
+            <element signature="e#392#455#0" expanded="false" />
+            <element signature="e#1095#1353#0" expanded="false" />
+            <element signature="e#1183#1352#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -497,14 +495,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_manual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="321">
+          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#117#394#0" expanded="false" />
-            <element signature="e#125#263#0" expanded="false" />
-            <element signature="e#312#375#0" expanded="false" />
-            <element signature="e#417#748#0" expanded="false" />
+            <element signature="e#197#474#0" expanded="false" />
+            <element signature="e#205#343#0" expanded="false" />
+            <element signature="e#392#455#0" expanded="false" />
+            <element signature="e#1095#1353#0" expanded="false" />
+            <element signature="e#1183#1352#0" expanded="false" />
           </folding>
         </state>
       </provider>
