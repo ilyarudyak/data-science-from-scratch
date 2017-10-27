@@ -50,29 +50,59 @@ def count_words(lemmatized_emails):
 
     return cv.transform(lemmatized_emails), cv.vocabulary_
 
-############# prior and likelihood ################
+############# prior and likelihood #################
 def get_prior():
-    p_spam = (sum(labels) + 1) / len(labels)
+    p_spam = sum(labels) / len(labels)
     return {0: 1 - p_spam, 1: p_spam}
 
-def get_likelihood():
-    pass
+def get_likelihood(smoothing=1):
+    return np.array([get_likelihood_from_label(0, smoothing=smoothing),
+                     get_likelihood_from_label(1, smoothing=smoothing)])
 
-############# posterior ###########################
+def get_likelihood_from_label(label, smoothing=1):
+    term_docs_array = term_docs.toarray()
+    term_docs_array_label = term_docs_array[np.array(labels) == label, :]
+    total_count = np.sum(term_docs_array_label) + term_docs_array.shape[1] * smoothing
+    return (np.sum(term_docs_array_label, axis=0) + smoothing) / total_count
+
+# -------------------- from solution --------------
+
+def get_label_index():
+    from collections import defaultdict
+    label_index = defaultdict(list)
+    for index, label in enumerate(labels):
+        label_index[label].append(index)
+    return label_index
+
+def get_likelihood2(smoothing=1):
+    likelihood = {}
+    for label, index in get_label_index().items():
+        likelihood[label] = term_docs[index, :].sum(axis=0) + smoothing
+        likelihood[label] = np.asarray(likelihood[label])[0]
+        total_count = likelihood[label].sum()
+        likelihood[label] = likelihood[label] / float(total_count)
+    return likelihood
+
+############# posterior ############################
 def get_posterior():
     pass
 
-############# testing #############################
+############# testing ##############################
 
 
 if __name__ == '__main__':
     root_path = os.path.expanduser('~/data/spam_packt/enron1/')
 
     emails, labels = get_data()
+    print(len(emails), len(labels))
     # X (sparse matrix, array has the shape (5171, 500)) and
     # cv.vocabulary_ (dictionary word:index of len 500)
     term_docs, feature_mapping = preprocess_emails()
     print(term_docs.toarray().shape)
-    prior = get_prior()
-    print(prior)
 
+    # prior = get_prior()
+    likelihood = get_likelihood()
+    print(len(likelihood[0]), likelihood[0][:5])
+
+    likelihood2 = get_likelihood2()
+    print(len(likelihood2[0]), likelihood2[0][:5])
