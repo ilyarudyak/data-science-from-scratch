@@ -28,15 +28,8 @@ def get_data():
     return emails, labels
 
 ############# preprocessing #######################
-def preprocess_emails(emails, filename='spam_packt/preprocessed_emails.p'):
-    lemmatized_emails = [lemmatize_and_remove_names(email) for email in emails]
-    term_docs, vocabulary = count_words(lemmatized_emails)
-    with open(filename, 'wb') as f:
-        pickle.dump(term_docs, f)
-
-def get_preprocessed_emails(filename='spam_packt/preprocessed_emails.p'):
-    with open(filename, 'rb') as f:
-        return pickle.load(f)
+def clean_emails(emails):
+    return [lemmatize_and_remove_names(email) for email in emails]
 
 def lemmatize_and_remove_names(email):
     all_names = set(names.words())
@@ -47,15 +40,11 @@ def lemmatize_and_remove_names(email):
                      word not in all_names])
 
 def count_words(lemmatized_emails):
-    cv = CountVectorizer(stop_words='english', max_features=500)
     cv.fit(lemmatized_emails)
+    return cv.transform(lemmatized_emails)
 
-    return cv.transform(lemmatized_emails), cv.vocabulary_
-
-def get_preprocessed_emails_from_list(emails):
-    lemmatized_emails = [lemmatize_and_remove_names(email) for email in emails]
-    term_docs, vocabulary = count_words(lemmatized_emails)
-    return term_docs
+def preprocess_test_emails(test_emails):
+    return cv.transform(clean_emails(test_emails))
 
 ############# prior and likelihood #################
 def get_prior(labels):
@@ -173,17 +162,19 @@ def get_test_emails():
 
 if __name__ == '__main__':
     root_path = os.path.expanduser('~/data/spam_packt/enron1/')
+    cv = CountVectorizer(stop_words='english', max_features=500)
 
     enron1_emails, enron1_labels = get_data()
-    # preprocess_emails(enron1_emails)
-    enron1_term_docs = get_preprocessed_emails()
+    enron1_term_docs = count_words(clean_emails(enron1_emails))
 
     prior = get_prior(enron1_labels)
-    likelihood = get_likelihood_solution(enron1_term_docs, enron1_labels)
+    likelihood = get_likelihood(enron1_term_docs, enron1_labels)
+    print(likelihood[0][:5])
 
     test_emails = get_test_emails()
     print(test_emails)
-    term_docs_test = get_preprocessed_emails_from_list(test_emails)
+    term_docs_test = preprocess_test_emails(test_emails)
     posterior = get_posterior_sol(term_docs_test, prior, likelihood)
     print(posterior)
+
 
