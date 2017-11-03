@@ -88,7 +88,7 @@ def get_likelihood_solution(X, labels, smoothing=1):
     return likelihood
 
 ############# posterior ############################
-def get_posterior(X, labels, prior, likelihood):
+def get_posterior(X, prior, likelihood):
     """
 
     :param X:
@@ -104,7 +104,16 @@ def get_posterior(X, labels, prior, likelihood):
     posteriors = []
     for i in range(num_docs):
         posterior = {key: np.log(prior_label) for key, prior_label in prior.items()}
-        return
+        for label, likelihood_label in likelihood.items():
+            for count, index in zip(X.getrow(i).data, X.getrow(i).indices):
+                posterior[label] += np.log(likelihood_label[index]) * count
+            posterior[label] = np.exp(posterior[label])
+
+        sum_posterior = sum(posterior.values())
+        for label in posterior:
+            posterior[label] /= sum_posterior
+        posteriors.append(posterior.copy())
+    return posteriors
 
 # -------------------- from solution --------------
 
@@ -174,7 +183,11 @@ if __name__ == '__main__':
     test_emails = get_test_emails()
     print(test_emails)
     term_docs_test = preprocess_test_emails(test_emails)
-    posterior = get_posterior_sol(term_docs_test, prior, likelihood)
-    print(posterior)
+
+    test_posterior = get_posterior_sol(term_docs_test, prior, likelihood)
+    test_posterior_sol = get_posterior_sol(term_docs_test, prior, likelihood)
+    print(test_posterior)
+    print(test_posterior_sol)
+
 
 
