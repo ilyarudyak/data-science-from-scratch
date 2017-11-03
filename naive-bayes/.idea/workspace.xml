@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72620d7b-77fb-40e4-be90-76f30639eff4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spam_packt/naive_bayes_sklearn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" afterPath="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,42 +18,49 @@
       <file leaf-file-name="naive_bayes_manual.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_manual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="174" column="0" lean-forward="true" selection-start-line="174" selection-start-column="0" selection-end-line="175" selection-end-column="39" />
+            <state relative-caret-position="186">
+              <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
               <folding>
-                <element signature="e#276#553#0" expanded="false" />
-                <element signature="e#284#422#0" expanded="false" />
-                <element signature="e#471#534#0" expanded="false" />
-                <element signature="e#575#929#0" expanded="false" />
-                <element signature="e#667#903#0" expanded="false" />
-                <element signature="e#748#903#0" expanded="false" />
-                <element signature="e#818#903#0" expanded="false" />
-                <element signature="e#1013#1075#0" expanded="false" />
-                <element signature="e#1120#1378#0" expanded="false" />
-                <element signature="e#1208#1377#0" expanded="false" />
-                <element signature="e#1420#1488#0" expanded="false" />
-                <element signature="e#1535#1581#0" expanded="false" />
-                <element signature="e#1663#1735#0" expanded="false" />
-                <element signature="e#1785#1936#0" expanded="false" />
-                <element signature="e#1792#1936#0" expanded="false" />
-                <element signature="e#2004#2271#0" expanded="false" />
-                <element signature="e#2340#2591#0" expanded="false" />
-                <element signature="e#2679#2857#0" expanded="false" />
-                <element signature="e#2916#3249#0" expanded="false" />
-                <element signature="e#2997#3227#0" expanded="false" />
-                <element signature="e#3977#4172#0" expanded="false" />
-                <element signature="e#4488#6372#0" expanded="false" />
-                <element signature="e#4488#4911#1" expanded="false" />
-                <element signature="e#5015#6350#0" expanded="false" />
-                <element signature="e#5015#5064#0" expanded="false" />
-                <element signature="e#5308#5598#0" expanded="false" />
-                <element signature="e#5598#5652#0" expanded="false" />
-                <element signature="e#5795#6034#0" expanded="false" />
-                <element signature="e#5916#6025#0" expanded="false" />
-                <element signature="e#6163#6306#0" expanded="false" />
-                <element signature="e#6456#6636#0" expanded="false" />
-                <element signature="e#6542#6613#0" expanded="false" />
+                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#713#949#0" expanded="false" />
+                <element signature="e#794#949#0" expanded="false" />
+                <element signature="e#864#949#0" expanded="false" />
+                <element signature="e#1059#1121#0" expanded="false" />
+                <element signature="e#1166#1424#0" expanded="false" />
+                <element signature="e#1254#1423#0" expanded="false" />
+                <element signature="e#1466#1534#0" expanded="false" />
+                <element signature="e#1581#1627#0" expanded="false" />
+                <element signature="e#1709#1781#0" expanded="false" />
+                <element signature="e#1831#1982#0" expanded="false" />
+                <element signature="e#1838#1982#0" expanded="false" />
+                <element signature="e#2050#2317#0" expanded="false" />
+                <element signature="e#2386#2637#0" expanded="false" />
+                <element signature="e#2725#2903#0" expanded="false" />
+                <element signature="e#2962#3295#0" expanded="false" />
+                <element signature="e#3043#3273#0" expanded="false" />
+                <element signature="e#4023#4218#0" expanded="false" />
+                <element signature="e#4534#6418#0" expanded="false" />
+                <element signature="e#4534#4957#1" expanded="false" />
+                <element signature="e#5061#6396#0" expanded="false" />
+                <element signature="e#5061#5110#0" expanded="false" />
+                <element signature="e#5354#5644#0" expanded="false" />
+                <element signature="e#5644#5698#0" expanded="false" />
+                <element signature="e#5841#6080#0" expanded="false" />
+                <element signature="e#5962#6071#0" expanded="false" />
+                <element signature="e#6209#6352#0" expanded="false" />
+                <element signature="e#6502#6682#0" expanded="false" />
+                <element signature="e#6588#6659#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="naive_bayes_sklearn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_sklearn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,6 +132,7 @@
         <option value="$PROJECT_DIR$/spam_packt/email_test1.txt" />
         <option value="$PROJECT_DIR$/spam_packt/email_test2.txt" />
         <option value="$PROJECT_DIR$/spam_packt/naive_bayes_solution.py" />
+        <option value="$PROJECT_DIR$/spam_packt/naive_bayes_sklearn.py" />
         <option value="$PROJECT_DIR$/spam_packt/naive_bayes_manual.py" />
       </list>
     </option>
@@ -285,6 +295,23 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="naive_bayes_sklearn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spam_packt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="naive-bayes" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spam_packt/naive_bayes_sklearn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="naive_bayes_solution" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,23 +325,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="naive-bayes" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spam_packt/naive_bayes_solution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="newsgroup" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newsgroups" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="naive-bayes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newsgroups/newsgroup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,19 +365,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.naive-bayes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.newsgroup" />
-      <item index="2" class="java.lang.String" itemvalue="Python.spam_sklearn" />
-      <item index="3" class="java.lang.String" itemvalue="Python.naive_bayes_manual" />
-      <item index="4" class="java.lang.String" itemvalue="Python.toy_example" />
-      <item index="5" class="java.lang.String" itemvalue="Python.naive_bayes_solution" />
+      <item index="1" class="java.lang.String" itemvalue="Python.spam_sklearn" />
+      <item index="2" class="java.lang.String" itemvalue="Python.naive_bayes_manual" />
+      <item index="3" class="java.lang.String" itemvalue="Python.toy_example" />
+      <item index="4" class="java.lang.String" itemvalue="Python.naive_bayes_solution" />
+      <item index="5" class="java.lang.String" itemvalue="Python.naive_bayes_sklearn" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.naive_bayes_manual" />
-        <item index="1" class="java.lang.String" itemvalue="Python.naive_bayes_solution" />
-        <item index="2" class="java.lang.String" itemvalue="Python.toy_example" />
-        <item index="3" class="java.lang.String" itemvalue="Python.spam_sklearn" />
-        <item index="4" class="java.lang.String" itemvalue="Python.newsgroup" />
+        <item index="1" class="java.lang.String" itemvalue="Python.naive_bayes_sklearn" />
+        <item index="2" class="java.lang.String" itemvalue="Python.naive_bayes_solution" />
+        <item index="3" class="java.lang.String" itemvalue="Python.toy_example" />
+        <item index="4" class="java.lang.String" itemvalue="Python.spam_sklearn" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +412,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53488374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53488374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -431,38 +441,35 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#276#553#0" expanded="false" />
-            <element signature="e#284#422#0" expanded="false" />
-            <element signature="e#471#534#0" expanded="false" />
-            <element signature="e#575#929#0" expanded="false" />
-            <element signature="e#667#903#0" expanded="false" />
-            <element signature="e#748#903#0" expanded="false" />
-            <element signature="e#818#903#0" expanded="false" />
-            <element signature="e#1013#1075#0" expanded="false" />
-            <element signature="e#1120#1378#0" expanded="false" />
-            <element signature="e#1208#1377#0" expanded="false" />
-            <element signature="e#1420#1488#0" expanded="false" />
-            <element signature="e#1535#1581#0" expanded="false" />
-            <element signature="e#1663#1735#0" expanded="false" />
-            <element signature="e#1785#1936#0" expanded="false" />
-            <element signature="e#1792#1936#0" expanded="false" />
-            <element signature="e#2004#2271#0" expanded="false" />
-            <element signature="e#2340#2591#0" expanded="false" />
-            <element signature="e#2679#2857#0" expanded="false" />
-            <element signature="e#2916#3249#0" expanded="false" />
-            <element signature="e#2997#3227#0" expanded="false" />
-            <element signature="e#3977#4172#0" expanded="false" />
-            <element signature="e#4488#6372#0" expanded="false" />
-            <element signature="e#4488#4911#1" expanded="false" />
-            <element signature="e#5015#6350#0" expanded="false" />
-            <element signature="e#5015#5064#0" expanded="false" />
-            <element signature="e#5308#5598#0" expanded="false" />
-            <element signature="e#5598#5652#0" expanded="false" />
-            <element signature="e#5795#6034#0" expanded="false" />
-            <element signature="e#5916#6025#0" expanded="false" />
-            <element signature="e#6163#6306#0" expanded="false" />
-            <element signature="e#6456#6636#0" expanded="false" />
-            <element signature="e#6542#6613#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#713#949#0" expanded="false" />
+            <element signature="e#794#949#0" expanded="false" />
+            <element signature="e#864#949#0" expanded="false" />
+            <element signature="e#1059#1121#0" expanded="false" />
+            <element signature="e#1166#1424#0" expanded="false" />
+            <element signature="e#1254#1423#0" expanded="false" />
+            <element signature="e#1466#1534#0" expanded="false" />
+            <element signature="e#1581#1627#0" expanded="false" />
+            <element signature="e#1709#1781#0" expanded="false" />
+            <element signature="e#1831#1982#0" expanded="false" />
+            <element signature="e#1838#1982#0" expanded="false" />
+            <element signature="e#2050#2317#0" expanded="false" />
+            <element signature="e#2386#2637#0" expanded="false" />
+            <element signature="e#2725#2903#0" expanded="false" />
+            <element signature="e#2962#3295#0" expanded="false" />
+            <element signature="e#3043#3273#0" expanded="false" />
+            <element signature="e#4023#4218#0" expanded="false" />
+            <element signature="e#4534#6418#0" expanded="false" />
+            <element signature="e#4534#4957#1" expanded="false" />
+            <element signature="e#5061#6396#0" expanded="false" />
+            <element signature="e#5061#5110#0" expanded="false" />
+            <element signature="e#5354#5644#0" expanded="false" />
+            <element signature="e#5644#5698#0" expanded="false" />
+            <element signature="e#5841#6080#0" expanded="false" />
+            <element signature="e#5962#6071#0" expanded="false" />
+            <element signature="e#6209#6352#0" expanded="false" />
+            <element signature="e#6502#6682#0" expanded="false" />
+            <element signature="e#6588#6659#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -482,38 +489,35 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#276#553#0" expanded="false" />
-            <element signature="e#284#422#0" expanded="false" />
-            <element signature="e#471#534#0" expanded="false" />
-            <element signature="e#575#929#0" expanded="false" />
-            <element signature="e#667#903#0" expanded="false" />
-            <element signature="e#748#903#0" expanded="false" />
-            <element signature="e#818#903#0" expanded="false" />
-            <element signature="e#1013#1075#0" expanded="false" />
-            <element signature="e#1120#1378#0" expanded="false" />
-            <element signature="e#1208#1377#0" expanded="false" />
-            <element signature="e#1420#1488#0" expanded="false" />
-            <element signature="e#1535#1581#0" expanded="false" />
-            <element signature="e#1663#1735#0" expanded="false" />
-            <element signature="e#1785#1936#0" expanded="false" />
-            <element signature="e#1792#1936#0" expanded="false" />
-            <element signature="e#2004#2271#0" expanded="false" />
-            <element signature="e#2340#2591#0" expanded="false" />
-            <element signature="e#2679#2857#0" expanded="false" />
-            <element signature="e#2916#3249#0" expanded="false" />
-            <element signature="e#2997#3227#0" expanded="false" />
-            <element signature="e#3977#4172#0" expanded="false" />
-            <element signature="e#4488#6372#0" expanded="false" />
-            <element signature="e#4488#4911#1" expanded="false" />
-            <element signature="e#5015#6350#0" expanded="false" />
-            <element signature="e#5015#5064#0" expanded="false" />
-            <element signature="e#5308#5598#0" expanded="false" />
-            <element signature="e#5598#5652#0" expanded="false" />
-            <element signature="e#5795#6034#0" expanded="false" />
-            <element signature="e#5916#6025#0" expanded="false" />
-            <element signature="e#6163#6306#0" expanded="false" />
-            <element signature="e#6456#6636#0" expanded="false" />
-            <element signature="e#6542#6613#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#713#949#0" expanded="false" />
+            <element signature="e#794#949#0" expanded="false" />
+            <element signature="e#864#949#0" expanded="false" />
+            <element signature="e#1059#1121#0" expanded="false" />
+            <element signature="e#1166#1424#0" expanded="false" />
+            <element signature="e#1254#1423#0" expanded="false" />
+            <element signature="e#1466#1534#0" expanded="false" />
+            <element signature="e#1581#1627#0" expanded="false" />
+            <element signature="e#1709#1781#0" expanded="false" />
+            <element signature="e#1831#1982#0" expanded="false" />
+            <element signature="e#1838#1982#0" expanded="false" />
+            <element signature="e#2050#2317#0" expanded="false" />
+            <element signature="e#2386#2637#0" expanded="false" />
+            <element signature="e#2725#2903#0" expanded="false" />
+            <element signature="e#2962#3295#0" expanded="false" />
+            <element signature="e#3043#3273#0" expanded="false" />
+            <element signature="e#4023#4218#0" expanded="false" />
+            <element signature="e#4534#6418#0" expanded="false" />
+            <element signature="e#4534#4957#1" expanded="false" />
+            <element signature="e#5061#6396#0" expanded="false" />
+            <element signature="e#5061#5110#0" expanded="false" />
+            <element signature="e#5354#5644#0" expanded="false" />
+            <element signature="e#5644#5698#0" expanded="false" />
+            <element signature="e#5841#6080#0" expanded="false" />
+            <element signature="e#5962#6071#0" expanded="false" />
+            <element signature="e#6209#6352#0" expanded="false" />
+            <element signature="e#6502#6682#0" expanded="false" />
+            <element signature="e#6588#6659#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -691,43 +695,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_sklearn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spam_packt/naive_bayes_manual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="174" column="0" lean-forward="true" selection-start-line="174" selection-start-column="0" selection-end-line="175" selection-end-column="39" />
+        <state relative-caret-position="186">
+          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding>
-            <element signature="e#276#553#0" expanded="false" />
-            <element signature="e#284#422#0" expanded="false" />
-            <element signature="e#471#534#0" expanded="false" />
-            <element signature="e#575#929#0" expanded="false" />
-            <element signature="e#667#903#0" expanded="false" />
-            <element signature="e#748#903#0" expanded="false" />
-            <element signature="e#818#903#0" expanded="false" />
-            <element signature="e#1013#1075#0" expanded="false" />
-            <element signature="e#1120#1378#0" expanded="false" />
-            <element signature="e#1208#1377#0" expanded="false" />
-            <element signature="e#1420#1488#0" expanded="false" />
-            <element signature="e#1535#1581#0" expanded="false" />
-            <element signature="e#1663#1735#0" expanded="false" />
-            <element signature="e#1785#1936#0" expanded="false" />
-            <element signature="e#1792#1936#0" expanded="false" />
-            <element signature="e#2004#2271#0" expanded="false" />
-            <element signature="e#2340#2591#0" expanded="false" />
-            <element signature="e#2679#2857#0" expanded="false" />
-            <element signature="e#2916#3249#0" expanded="false" />
-            <element signature="e#2997#3227#0" expanded="false" />
-            <element signature="e#3977#4172#0" expanded="false" />
-            <element signature="e#4488#6372#0" expanded="false" />
-            <element signature="e#4488#4911#1" expanded="false" />
-            <element signature="e#5015#6350#0" expanded="false" />
-            <element signature="e#5015#5064#0" expanded="false" />
-            <element signature="e#5308#5598#0" expanded="false" />
-            <element signature="e#5598#5652#0" expanded="false" />
-            <element signature="e#5795#6034#0" expanded="false" />
-            <element signature="e#5916#6025#0" expanded="false" />
-            <element signature="e#6163#6306#0" expanded="false" />
-            <element signature="e#6456#6636#0" expanded="false" />
-            <element signature="e#6542#6613#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#713#949#0" expanded="false" />
+            <element signature="e#794#949#0" expanded="false" />
+            <element signature="e#864#949#0" expanded="false" />
+            <element signature="e#1059#1121#0" expanded="false" />
+            <element signature="e#1166#1424#0" expanded="false" />
+            <element signature="e#1254#1423#0" expanded="false" />
+            <element signature="e#1466#1534#0" expanded="false" />
+            <element signature="e#1581#1627#0" expanded="false" />
+            <element signature="e#1709#1781#0" expanded="false" />
+            <element signature="e#1831#1982#0" expanded="false" />
+            <element signature="e#1838#1982#0" expanded="false" />
+            <element signature="e#2050#2317#0" expanded="false" />
+            <element signature="e#2386#2637#0" expanded="false" />
+            <element signature="e#2725#2903#0" expanded="false" />
+            <element signature="e#2962#3295#0" expanded="false" />
+            <element signature="e#3043#3273#0" expanded="false" />
+            <element signature="e#4023#4218#0" expanded="false" />
+            <element signature="e#4534#6418#0" expanded="false" />
+            <element signature="e#4534#4957#1" expanded="false" />
+            <element signature="e#5061#6396#0" expanded="false" />
+            <element signature="e#5061#5110#0" expanded="false" />
+            <element signature="e#5354#5644#0" expanded="false" />
+            <element signature="e#5644#5698#0" expanded="false" />
+            <element signature="e#5841#6080#0" expanded="false" />
+            <element signature="e#5962#6071#0" expanded="false" />
+            <element signature="e#6209#6352#0" expanded="false" />
+            <element signature="e#6502#6682#0" expanded="false" />
+            <element signature="e#6588#6659#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,5 @@
 import numpy as np
-import spam_packt.naive_bayes_manual
+import spam_packt.naive_bayes_my
 
 def get_likelihood():
     X_spam = X[labels == 1]

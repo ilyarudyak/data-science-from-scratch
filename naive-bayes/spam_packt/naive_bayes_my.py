@@ -2,6 +2,7 @@ from nltk.corpus import names
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
 
 import glob
 import os
@@ -175,6 +176,16 @@ def classify(posteriors):
 def accuracy(Y, Y_pred):
     return sum([1 if y == y_pred else 0 for y, y_pred in zip(Y, Y_pred)]) / len(Y)
 
+def train_sklearn_model():
+    clf = MultinomialNB(alpha=1.0, fit_prior=True)
+    clf.fit(X_train_trans, Y_train)
+    prediction_prob = clf.predict_proba(X_test_trans)
+    print(prediction_prob[:10])
+    prediction = clf.predict(X_test_trans)
+    print(prediction[:10])
+    accuracy = clf.score(X_test_trans, Y_test)
+    print('The accuracy using MultinomialNB is: {0:.1f}%'.format(accuracy * 100))
+
 
 if __name__ == '__main__':
     root_path = os.path.expanduser('~/data/spam_packt/enron1/')
@@ -203,15 +214,18 @@ if __name__ == '__main__':
                                                         test_size=0.1, random_state=42)
     # print('X_train:{} Y_train:{} X_test:{} Y_test{}'.format(len(X_train), len(Y_train), len(X_test), len(Y_test)))
     X_train_trans = count_words(X_train)
-    prior = get_prior(Y_train)
-    likelihood = get_likelihood(X_train_trans, Y_train)
-
     X_test_trans = cv.transform(X_test)
-    posteriors = get_posterior_sol(X_test_trans, prior, likelihood)
-    Y_test_pred = classify(posteriors)
-    print(Y_test_pred[:5])
-    print(Y_test[:5])
-    print(accuracy(Y_test, Y_test_pred))
+
+    # manual model
+    # prior = get_prior(Y_train)
+    # likelihood = get_likelihood(X_train_trans, Y_train)
+    # posteriors = get_posterior_sol(X_test_trans, prior, likelihood)
+    # Y_test_pred = classify(posteriors)
+    # print(Y_test_pred[:5])
+    # print(Y_test[:5])
+    # print(accuracy(Y_test, Y_test_pred))
+
+    train_sklearn_model()
 
 
 
