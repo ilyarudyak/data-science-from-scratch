@@ -28,14 +28,14 @@ def get_data():
     return emails, labels
 
 ############# preprocessing #######################
-def preprocess_emails():
+def preprocess_emails(emails, filename='spam_packt/preprocessed_emails.p'):
     lemmatized_emails = [lemmatize_and_remove_names(email) for email in emails]
     term_docs, vocabulary = count_words(lemmatized_emails)
-    with open('preprocessed_emails.p', 'wb') as f:
+    with open(filename, 'wb') as f:
         pickle.dump(term_docs, f)
 
-def get_preprocessed_emails():
-    with open('preprocessed_emails.p', 'rb') as f:
+def get_preprocessed_emails(filename='spam_packt/preprocessed_emails.p'):
+    with open(filename, 'rb') as f:
         return pickle.load(f)
 
 def lemmatize_and_remove_names(email):
@@ -52,23 +52,28 @@ def count_words(lemmatized_emails):
 
     return cv.transform(lemmatized_emails), cv.vocabulary_
 
+def get_preprocessed_emails_from_list(emails):
+    lemmatized_emails = [lemmatize_and_remove_names(email) for email in emails]
+    term_docs, vocabulary = count_words(lemmatized_emails)
+    return term_docs
+
 ############# prior and likelihood #################
-def get_prior():
+def get_prior(labels):
     p_spam = sum(labels) / len(labels)
     return {0: 1 - p_spam, 1: p_spam}
 
-def get_likelihood(smoothing=1):
-    return np.array([get_likelihood_from_label2(0, smoothing=smoothing),
-                     get_likelihood_from_label2(1, smoothing=smoothing)])
+def get_likelihood(X, labels, smoothing=1):
+    return {0: get_likelihood_from_label2(X, labels, 0, smoothing=smoothing),
+            1: get_likelihood_from_label2(X, labels, 1, smoothing=smoothing)}
 
-def get_likelihood_from_label(label, smoothing=1):
-    term_docs_array = term_docs.toarray()
+def get_likelihood_from_label(X, labels, label, smoothing=1):
+    term_docs_array = X.toarray()
     term_docs_array_label = term_docs_array[np.array(labels) == label, :]
     total_count = np.sum(term_docs_array_label) + term_docs_array.shape[1] * smoothing
     return (np.sum(term_docs_array_label, axis=0) + smoothing) / total_count
 
-def get_likelihood_from_label2(label, smoothing=1):
-    term_docs_label = term_docs[np.array(labels) == label, :]
+def get_likelihood_from_label2(X, labels, label, smoothing=1):
+    term_docs_label = X[np.array(labels) == label, :]
     total_count = np.sum(term_docs_label) + 500 * smoothing
     likelihood = (np.sum(term_docs_label, axis=0) + smoothing) / total_count
     likelihood = np.asarray(likelihood)
@@ -76,17 +81,17 @@ def get_likelihood_from_label2(label, smoothing=1):
 
 # -------------------- from solution --------------
 
-def get_label_index():
+def get_label_index(labels):
     from collections import defaultdict
     label_index = defaultdict(list)
     for index, label in enumerate(labels):
         label_index[label].append(index)
     return label_index
 
-def get_likelihood2(smoothing=1):
+def get_likelihood_solution(X, labels, smoothing=1):
     likelihood = {}
-    for label, index in get_label_index().items():
-        likelihood[label] = term_docs[index, :].sum(axis=0) + smoothing
+    for label, index in get_label_index(labels).items():
+        likelihood[label] = X[index, :].sum(axis=0) + smoothing
         likelihood[label] = np.asarray(likelihood[label])[0]
 
         total_count = likelihood[label].sum()
@@ -94,25 +99,91 @@ def get_likelihood2(smoothing=1):
     return likelihood
 
 ############# posterior ############################
-def get_posterior():
-    pass
+def get_posterior(X, labels, prior, likelihood):
+    """
+
+    :param X:
+    :param labels:
+    :param prior: dictionary {0: 1 - p(spam), 1: p(spam)}
+    :param likelihood:  dictionary;
+                        likelihood[0] - list of p(word|~spam);
+                        likelihood[1] - list of p(word|spam);
+    :return: list of dictionaries for each training example;
+             each dictionary is of the form {0: p(~spam), 1: p(spam)}
+    """
+    num_docs = X.shape[0]
+    posteriors = []
+    for i in range(num_docs):
+        posterior = {key: np.log(prior_label) for key, prior_label in prior.items()}
+        return
+
+# -------------------- from solution --------------
+
+def get_posterior_sol(term_document_matrix, prior, likelihood):
+    """ Compute posterior of testing samples, based on prior and likelihood
+    Args:
+        term_document_matrix (sparse matrix)
+        prior (dictionary, with class label as key, corresponding prior as the value)
+        likelihood (dictionary, with class label as key, corresponding conditional probability vector as value)
+    Returns:
+        dictionary, with class label as key, corresponding posterior as value
+    """
+    num_docs = term_document_matrix.shape[0]
+    posteriors = []
+    for i in range(num_docs):
+        # posterior is proportional to prior * likelihood
+        # = exp(log(prior * likelihood))
+        # = exp(log(prior) + log(likelihood))
+        posterior = {key: np.log(prior_label) for key, prior_label in prior.items()}
+        for label, likelihood_label in likelihood.items():
+            term_document_vector = term_document_matrix.getrow(i)
+            counts = term_document_vector.data
+            indices = term_document_vector.indices
+            for count, index in zip(counts, indices):
+                posterior[label] += np.log(likelihood_label[index]) * count
+        # exp(-1000):exp(-999) will cause zero division error,
+        # however it equates to exp(0):exp(1)
+        min_log_posterior = min(posterior.values())
+        for label in posterior:
+            try:
+                posterior[label] = np.exp(posterior[label] - min_log_posterior)
+            except:
+                # if one's log value is excessively large, assign it infinity
+                posterior[label] = float('inf')
+        # normalize so that all sums up to 1
+        sum_posterior = sum(posterior.values())
+        for label in posterior:
+            if posterior[label] == float('inf'):
+                posterior[label] = 1.0
+            else:
+                posterior[label] /= sum_posterior
+        posteriors.append(posterior.copy())
+    return posteriors
+
 
 ############# testing ##############################
+
+def get_test_emails():
+    test_emails = []
+    for filename in glob.glob('spam_packt/email_test*.txt'):
+        with open(filename, 'r') as f:
+            test_emails.append(f.read())
+    return test_emails
 
 
 if __name__ == '__main__':
     root_path = os.path.expanduser('~/data/spam_packt/enron1/')
 
-    emails, labels = get_data()
-    term_docs = get_preprocessed_emails()
+    enron1_emails, enron1_labels = get_data()
+    # preprocess_emails(enron1_emails)
+    enron1_term_docs = get_preprocessed_emails()
 
-    # prior = get_prior()
-    tic = time.time()
-    likelihood = get_likelihood()
-    toc = time.time()
-    print(likelihood[0][:5], toc - tic)
+    prior = get_prior(enron1_labels)
+    likelihood = get_likelihood_solution(enron1_term_docs, enron1_labels)
 
-    tic = time.time()
-    likelihood2 = get_likelihood2()
-    toc = time.time()
-    print(likelihood2[0][:5], toc - tic)
+    test_emails = get_test_emails()
+    print(test_emails)
+    term_docs_test = get_preprocessed_emails_from_list(test_emails)
+    posterior = get_posterior_sol(term_docs_test, prior, likelihood)
+    print(posterior)
+
