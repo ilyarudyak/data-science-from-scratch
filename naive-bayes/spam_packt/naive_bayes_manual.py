@@ -1,6 +1,7 @@
 from nltk.corpus import names
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
 
 import glob
 import os
@@ -168,26 +169,51 @@ def get_test_emails():
             test_emails.append(f.read())
     return test_emails
 
+def classify(posteriors):
+    return [1 if posterior[1] >= .5 else 0 for posterior in posteriors]
+
+def accuracy(Y, Y_pred):
+    return sum([1 if y == y_pred else 0 for y, y_pred in zip(Y, Y_pred)]) / len(Y)
+
 
 if __name__ == '__main__':
     root_path = os.path.expanduser('~/data/spam_packt/enron1/')
     cv = CountVectorizer(stop_words='english', max_features=500)
 
     enron1_emails, enron1_labels = get_data()
-    enron1_term_docs = count_words(clean_emails(enron1_emails))
+    enron1_clean_emails = clean_emails(enron1_emails)
 
-    prior = get_prior(enron1_labels)
-    likelihood = get_likelihood(enron1_term_docs, enron1_labels)
-    print(likelihood[0][:5])
+    # train on all data
+    # enron1_term_docs = count_words(enron1_clean_emails)
+    # prior = get_prior(enron1_labels)
+    # likelihood = get_likelihood(enron1_term_docs, enron1_labels)
 
-    test_emails = get_test_emails()
-    print(test_emails)
-    term_docs_test = preprocess_test_emails(test_emails)
+    # test on 2 emails
+    # test_emails = get_test_emails()
+    # print(test_emails)
+    # term_docs_test = preprocess_test_emails(test_emails)
+    #
+    # test_posterior = get_posterior_sol(term_docs_test, prior, likelihood)
+    # test_posterior_sol = get_posterior_sol(term_docs_test, prior, likelihood)
+    # print(test_posterior)
+    # print(test_posterior_sol)
 
-    test_posterior = get_posterior_sol(term_docs_test, prior, likelihood)
-    test_posterior_sol = get_posterior_sol(term_docs_test, prior, likelihood)
-    print(test_posterior)
-    print(test_posterior_sol)
+    # create test set
+    X_train, X_test, Y_train, Y_test = train_test_split(enron1_clean_emails, enron1_labels,
+                                                        test_size=0.1, random_state=42)
+    # print('X_train:{} Y_train:{} X_test:{} Y_test{}'.format(len(X_train), len(Y_train), len(X_test), len(Y_test)))
+    X_train_trans = count_words(X_train)
+    prior = get_prior(Y_train)
+    likelihood = get_likelihood(X_train_trans, Y_train)
+
+    X_test_trans = cv.transform(X_test)
+    posteriors = get_posterior_sol(X_test_trans, prior, likelihood)
+    Y_test_pred = classify(posteriors)
+    print(Y_test_pred[:5])
+    print(Y_test[:5])
+    print(accuracy(Y_test, Y_test_pred))
+
+
 
 
 
